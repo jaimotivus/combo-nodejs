@@ -1,0 +1,94 @@
+.combo-box {
+    position: relative;
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .combo-input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+    font-size: 16px;
+  }
+
+  .combo-input:hover {
+    background-color: #f9f9f9;
+  }
+
+  .combo-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .suggestions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .suggestions li {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .suggestions li.active {
+    background-color: #d0ebff;
+  }
+  .suggestions li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .app-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #007bff;
+  }
+  
+  .loading::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid #007bff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    animation: spin 0.8s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .selected-app {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
